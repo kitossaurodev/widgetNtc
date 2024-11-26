@@ -1,13 +1,33 @@
 {
   "name": "my-widget-project",
   "version": "1.0.0",
+  "description": "Projeto de widget para coleta de emails e integração com Notion API",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
   "dependencies": {
     "axios": "^1.7.8",
     "dotenv": "^16.4.5",
     "express": "^5.0.1"
   },
-  "scripts": {
-    "start": "node server.js"
-  }
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/my-widget-project.git"
+  },
+  "keywords": [
+    "widget",
+    "notion",
+    "email-collector",
+    "nodejs"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT"
 }
