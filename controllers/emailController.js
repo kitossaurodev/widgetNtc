@@ -17,14 +17,14 @@ const sendEmailToNotion = async (req, res) => {
       {
         parent: { database_id: DATABASE_ID },
         properties: {
-          Title: {
+          ID: { // Nome da coluna principal no Notion
             title: [
               {
                 text: { content: `Inscrição de: ${email}` }
               }
             ]
           },
-          Email: {
+          Email: { // Nome da coluna de email no Notion
             email: email
           }
         }
@@ -46,3 +46,4 @@ const sendEmailToNotion = async (req, res) => {
 };
 
 module.exports = { sendEmailToNotion };
+
