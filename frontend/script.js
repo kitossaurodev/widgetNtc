@@ -37,3 +37,4 @@ document.getElementById('email-form').addEventListener('submit', async function(
   message.classList.remove('hidden');
   emailInput.value = ''; // Limpar o campo de email
 });
+

@@ -8,10 +8,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware para processar JSON e servir arquivos estáticos
+// Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "frontend")));
+app.use(express.static(path.join(__dirname, "frontend"))); // Servir arquivos frontend
 
 // Rotas
 app.use("/api/emails", emailRoutes);
