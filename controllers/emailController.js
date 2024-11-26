@@ -10,6 +10,8 @@ const sendEmailToNotion = async (req, res) => {
   if (!email) {
     return res.status(400).json({ error: "O email é obrigatório!" });
   }
+  
+  const provider = email.split("@")[1]?.split(".")[0];
 
   try {
     await axios.post(
@@ -20,7 +22,7 @@ const sendEmailToNotion = async (req, res) => {
           ID: { // Nome da coluna principal no Notion
             title: [
               {
-                text: { content: `Inscrição de: ${email}` }
+                text: { content: provider || "Provedor não identificado" }
               }
             ]
           },
